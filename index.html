@@ -261,6 +261,16 @@
   }
   .tag.accent { border-color: rgba(74,127,244,0.4); color: var(--accent-light); background: rgba(74,127,244,0.08); }
 
+  .project-links { display: flex; gap: 10px; margin-bottom: 1.25rem; }
+  .project-link {
+    font-size: 11px; font-weight: 700; letter-spacing: 0.04em;
+    color: var(--accent-light); text-decoration: none;
+    border: 1px solid var(--border-blue); border-radius: 50px;
+    padding: 6px 14px; display: inline-flex; align-items: center; gap: 6px;
+    transition: all 0.2s;
+  }
+  .project-link:hover { background: rgba(74,127,244,0.12); border-color: var(--accent); transform: translateY(-2px); }
+
   /* ── EXPERIENCE / EDUCATION ── */
   .exp-card {
     background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
@@ -628,6 +638,10 @@
         <div class="tech-badge" style="background: linear-gradient(135deg,#1a56db,#3b82f6);">JIT</div>
         <span>Jitsi</span>
       </div>
+      <div class="tech-item">
+        <div class="tech-badge" style="background: linear-gradient(135deg,#02042b,#3395ff);">RZP</div>
+        <span>Razorpay</span>
+      </div>
     </div>
 
     <div class="hero-cta">
@@ -669,25 +683,25 @@
   <div class="about-grid reveal">
     <div>
       <h2 class="about-heading">Crafting digital<br>experiences that <em>scale.</em></h2>
-      <p class="about-body">Full Stack Developer with expertise across the entire stack — from Angular UIs to ASP.NET backends and React Native mobile apps. I specialise in REST API integration, real-time communication systems, and delivering user-focused solutions including video calling and push notifications.<br><br>Currently at Vcidex Solution Pvt. Ltd., Chennai, building production-grade systems since January 2025.</p>
+      <p class="about-body">Full Stack Developer with expertise across the entire stack — from Angular UIs to ASP.NET backends and React Native / Flutter mobile apps. I specialise in REST API integration, real-time communication systems, and delivering user-focused solutions including video calling, Razorpay payments, and push notifications. I've built and published 6 mobile apps live on the Google Play Store and Apple App Store.<br><br>Currently at Vcidex Solution Pvt. Ltd., Chennai, building production-grade systems since January 2025.</p>
     </div>
     <div>
       <div class="about-stats">
         <div class="stat-box">
-          <div class="stat-num">3+</div>
-          <div class="stat-label">Projects shipped</div>
+          <div class="stat-num">6</div>
+          <div class="stat-label">Apps published</div>
         </div>
         <div class="stat-box">
           <div class="stat-num">7.89</div>
           <div class="stat-label">CGPA (B.E. CSE)</div>
         </div>
         <div class="stat-box">
-          <div class="stat-num">5+</div>
+          <div class="stat-num">8+</div>
           <div class="stat-label">Technologies</div>
         </div>
         <div class="stat-box">
-          <div class="stat-num">2025</div>
-          <div class="stat-label">Currently active</div>
+          <div class="stat-num">2</div>
+          <div class="stat-label">App stores (iOS &amp; Android)</div>
         </div>
       </div>
     </div>
@@ -701,9 +715,12 @@
     <div class="skill-col">
       <div class="skill-col-title">Mobile</div>
       <div class="skill-item"><span class="skill-dot"></span>React Native</div>
+      <div class="skill-item"><span class="skill-dot"></span>Expo</div>
+      <div class="skill-item"><span class="skill-dot"></span>Flutter</div>
       <div class="skill-item"><span class="skill-dot"></span>Firebase (FCM)</div>
       <div class="skill-item"><span class="skill-dot"></span>Jitsi</div>
-      <div class="skill-item"><span class="skill-dot"></span>Push Notifications</div>
+      <div class="skill-item"><span class="skill-dot"></span>Razorpay</div>
+      <div class="skill-item"><span class="skill-dot"></span>Play Store &amp; App Store Deployment</div>
     </div>
     <div class="skill-col">
       <div class="skill-col-title">Frontend</div>
@@ -735,11 +752,33 @@
 
     <div class="project-card">
       <div class="project-number">01 — Mobile App</div>
-      <div class="project-title">Gym Management<br>Mobile App</div>
-      <p class="project-desc">React Native app for gym members and trainers. Real-time video calling via Jitsi, session booking workflows, full membership lifecycle, and push notifications via Firebase FCM.</p>
+      <div class="project-title">HerGym<br>Member &amp; Trainer Fitness App</div>
+      <p class="project-desc">Dual-flow React Native + Expo app with separate trainer and member experiences. Real-time video coaching via Jitsi, session booking with request → accept → join → complete lifecycle, and Razorpay membership payments.</p>
+      <div class="project-links">
+        <a class="project-link" href="https://play.google.com/store/apps/details?id=com.hergym.gymtrack" target="_blank">Android ↗</a>
+        <a class="project-link" href="https://apps.apple.com/in/app/c3-hergym/id6792724908" target="_blank">iOS ↗</a>
+      </div>
       <div class="project-tags">
         <span class="tag accent">React Native</span>
+        <span class="tag accent">Expo</span>
         <span class="tag accent">Jitsi</span>
+        <span class="tag accent">Razorpay</span>
+        <span class="tag">Firebase</span>
+        <span class="tag">C#</span>
+        <span class="tag">SQL</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-number">02 — Mobile App</div>
+      <div class="project-title">Detawo<br>Ordering, Admin &amp; Kitchen KOT</div>
+      <p class="project-desc">All-in-one React Native + Expo app combining customer food ordering, an admin dashboard (OTP login, live orders, stock, RBAC), and a kitchen KOT module with cooking workflow and thermal-printer integration.</p>
+      <div class="project-links">
+        <a class="project-link" href="https://play.google.com/store/apps/details?id=com.detawo.sr" target="_blank">Android ↗</a>
+      </div>
+      <div class="project-tags">
+        <span class="tag accent">React Native</span>
+        <span class="tag accent">Expo</span>
         <span class="tag">Firebase</span>
         <span class="tag">C#</span>
         <span class="tag">REST APIs</span>
@@ -748,7 +787,72 @@
     </div>
 
     <div class="project-card">
-      <div class="project-number">02 — Web App</div>
+      <div class="project-number">03 — Mobile App</div>
+      <div class="project-title">Dosa Idly<br>Food Ordering App</div>
+      <p class="project-desc">Customer-facing food ordering app for a restaurant chain, built on the Detawo ordering platform. Browsing, cart, order placement, and live order status tracking.</p>
+      <div class="project-links">
+        <a class="project-link" href="https://play.google.com/store/apps/details?id=com.detawo.dosaidly" target="_blank">Android ↗</a>
+        <a class="project-link" href="https://apps.apple.com/in/app/dosa-idly-kada-shop/id6792690288" target="_blank">iOS ↗</a>
+      </div>
+      <div class="project-tags">
+        <span class="tag accent">React Native</span>
+        <span class="tag accent">Expo</span>
+        <span class="tag">Firebase</span>
+        <span class="tag">C#</span>
+        <span class="tag">SQL</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-number">04 — Mobile App</div>
+      <div class="project-title">Storyboard Textiles<br>Fabric Costing &amp; QC App</div>
+      <p class="project-desc">Mobile costing and quality-control app for textile manufacturers. Automated fabric/dyeing cost calculation, QC inspection and approval workflow, PDF report generation, and one-tap WhatsApp sharing.</p>
+      <div class="project-links">
+        <a class="project-link" href="https://play.google.com/store/apps/details?id=com.storyboard.textiles" target="_blank">Android ↗</a>
+        <a class="project-link" href="https://apps.apple.com/in/app/storyboard-textiles/id6792996979" target="_blank">iOS ↗</a>
+      </div>
+      <div class="project-tags">
+        <span class="tag accent">React Native</span>
+        <span class="tag accent">Expo</span>
+        <span class="tag">PDF Export</span>
+        <span class="tag">C#</span>
+        <span class="tag">SQL</span>
+        <span class="tag">REST APIs</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-number">05 — Mobile App</div>
+      <div class="project-title">Storyboard Approval<br>Mobile Approval Workflow</div>
+      <p class="project-desc">Mobile approval app replacing slow email/paper approval chains with a single-tap, notification-driven workflow for faster business sign-offs.</p>
+      <div class="project-links">
+        <a class="project-link" href="https://play.google.com/store/apps/details?id=com.vcidex.approval" target="_blank">Android ↗</a>
+        <a class="project-link" href="https://apps.apple.com/in/app/storyboard-approval/id6793019440" target="_blank">iOS ↗</a>
+      </div>
+      <div class="project-tags">
+        <span class="tag accent">React Native</span>
+        <span class="tag accent">Expo</span>
+        <span class="tag">Firebase</span>
+        <span class="tag">REST APIs</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-number">06 — Personal Project</div>
+      <div class="project-title">Thayam<br>Multiplayer Board Game</div>
+      <p class="project-desc">Personal multiplayer board game with real-time room creation, friend invites, and in-game chat — built with Flutter and Firebase Realtime Database, outside of work hours.</p>
+      <div class="project-links">
+        <a class="project-link" href="https://play.google.com/store/apps/details?id=com.kanishkar.thayamgame" target="_blank">Android ↗</a>
+      </div>
+      <div class="project-tags">
+        <span class="tag accent">Flutter</span>
+        <span class="tag accent">Firebase Realtime DB</span>
+        <span class="tag">Firebase Auth</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-number">07 — Web App</div>
       <div class="project-title">Loan Origination<br>System (LOS)</div>
       <p class="project-desc">Scalable loan processing platform with Angular frontend and ASP.NET backend. Role-based access control for Admin, Loan Officer, and Customer. REST APIs for end-to-end loan workflows.</p>
       <div class="project-tags">
@@ -757,33 +861,6 @@
         <span class="tag">C#</span>
         <span class="tag">SQL</span>
         <span class="tag">RBAC</span>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <div class="project-number">03 — Real-time</div>
-      <div class="project-title">KOT Notification<br>System</div>
-      <p class="project-desc">Real-time kitchen order notification system built with Firebase FCM. Enables instant alerts to kitchen staff for new orders, improving restaurant operational efficiency.</p>
-      <div class="project-tags">
-        <span class="tag accent">React Native</span>
-        <span class="tag accent">Firebase</span>
-        <span class="tag">C#</span>
-        <span class="tag">ASP.NET</span>
-        <span class="tag">SQL</span>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <div class="project-number">04 — Mobile App</div>
-      <div class="project-title">Textiles Costing<br>&amp; PDF Share App</div>
-      <p class="project-desc">React Native app for textiles businesses to calculate and manage fabric costing. Generates detailed cost breakdowns and exports shareable PDF reports directly from the mobile app.</p>
-      <div class="project-tags">
-        <span class="tag accent">React Native</span>
-        <span class="tag accent">PDF Export</span>
-        <span class="tag">C#</span>
-        <span class="tag">ASP.NET</span>
-        <span class="tag">SQL</span>
-        <span class="tag">REST APIs</span>
       </div>
     </div>
 
@@ -805,6 +882,7 @@
       <li>Developed responsive, user-friendly web applications using Angular with Bootstrap for cross-platform performance.</li>
       <li>Built and maintained server-side applications in C#, creating robust REST APIs to handle business logic and data processing.</li>
       <li>Designed and optimised relational databases with SQL Server and MySQL, writing complex queries for efficient data retrieval and management.</li>
+      <li>Built and deployed React Native / Expo mobile apps with Firebase push notifications, Razorpay payments, and real-time features.</li>
     </ul>
   </div>
 </section>
